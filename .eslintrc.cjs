@@ -3,7 +3,7 @@ const env = {
 	es2022: true,
 	browser: true,
 	amd: true,
-	node: true,
+	node: true
 };
 const EXTENDS = [
 	"eslint:recommended",
@@ -11,7 +11,7 @@ const EXTENDS = [
 	"plugin:import/recommended",
 	"plugin:import/typescript",
 	"plugin:editorconfig/noconflict",
-	"plugin:prettier/recommended",
+	"plugin:prettier/recommended"
 ];
 const plugins = [
 	"@typescript-eslint",
@@ -19,12 +19,12 @@ const plugins = [
 	"simple-import-sort",
 	"unused-imports",
 	"check-file",
-	"editorconfig",
+	"editorconfig"
 ];
 const overrides = [];
 const parserOptions = {
 	ecmaVersion: "latest",
-	sourceType: "module",
+	sourceType: "module"
 };
 
 const rules = {
@@ -35,14 +35,14 @@ const rules = {
 		"error",
 		{
 			before: false,
-			after: true,
-		},
+			after: true
+		}
 	],
 	"no-multi-spaces": [
 		"error",
 		{
-			ignoreEOLComments: false,
-		},
+			ignoreEOLComments: false
+		}
 	],
 	"padding-line-between-statements": [
 		"error",
@@ -54,12 +54,12 @@ const rules = {
 		{
 			blankLine: "always",
 			prev: ["const", "let", "var"],
-			next: "*",
+			next: "*"
 		},
 		{
 			blankLine: "any",
 			prev: ["const", "let", "var"],
-			next: ["const", "let", "var"],
+			next: ["const", "let", "var"]
 		},
 		{ blankLine: "always", prev: "block-like", next: "*" },
 		{ blankLine: "always", prev: "expression", next: "*" }, // veremos
@@ -69,19 +69,19 @@ const rules = {
 		{ blankLine: "any", prev: "import", next: "import" },
 		{ blankLine: "always", prev: "export", next: "*" },
 		{ blankLine: "always", prev: "*", next: "export" },
-		{ blankLine: "always", prev: "if", next: "*" },
+		{ blankLine: "always", prev: "if", next: "*" }
 	],
 	"arrow-spacing": ["error", { before: true, after: true }],
 	"lines-between-class-members": [
 		"error",
 		"always",
-		{ exceptAfterSingleLine: true },
+		{ exceptAfterSingleLine: true }
 	],
 	"object-curly-spacing": ["error", "always"],
 	"computed-property-spacing": [
 		"error",
 		"never",
-		{ enforceForClassMembers: true },
+		{ enforceForClassMembers: true }
 	],
 	"keyword-spacing": ["error", { before: true }],
 	"space-before-blocks": "error",
@@ -99,8 +99,8 @@ const rules = {
 		"error",
 		{
 			selector: "class",
-			format: ["PascalCase"],
-		},
+			format: ["PascalCase"]
+		}
 	],
 
 	//? Codely: plugins
@@ -115,8 +115,8 @@ const rules = {
 	"check-file/folder-naming-convention": [
 		"error",
 		{
-			"./src/**/": "KEBAB_CASE",
-		},
+			"./src/**/": "KEBAB_CASE"
+		}
 	],
 
 	"unused-imports/no-unused-imports": "error",
@@ -126,8 +126,8 @@ const rules = {
 			vars: "all",
 			varsIgnorePattern: "^_",
 			args: "after-used",
-			argsIgnorePattern: "^_",
-		},
+			argsIgnorePattern: "^_"
+		}
 	],
 
 	"array-callback-return": ["error", { checkForEach: true }],
@@ -159,12 +159,12 @@ const rules = {
 	"prefer-spread": "error",
 	"prefer-template": "error",
 	radix: "error",
-	yoda: "error",
+	yoda: "error"
 };
 const settings = {
 	"import/resolver": {
-		typescript: {},
-	},
+		typescript: {}
+	}
 };
 
 module.exports = {
@@ -176,5 +176,5 @@ module.exports = {
 	parserOptions,
 	parser: "@typescript-eslint/parser",
 	rules,
-	settings,
+	settings
 };

@@ -18,8 +18,8 @@ module.exports = {
 				"heading-order": "off",
 				"link-name": "off",
 				"meta-description": "off",
-				"uses-text-compression": "off",
-			},
-		},
-	},
+				"uses-text-compression": "off"
+			}
+		}
+	}
 };
