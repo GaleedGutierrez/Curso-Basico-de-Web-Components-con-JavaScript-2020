@@ -1,0 +1,63 @@
+{
+	"name": "curso-basico-de-web-components-con-javascript-2020",
+	"version": "1.0.0",
+	"description": "web components",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"prepare": "husky install",
+		"lint": "npx eslint ./**.{js,mjs,cjs,ts,mts}",
+		"lint:fix": "npx eslint --fix ./**.{js,mjs,cjs,ts,mts}",
+		"stylelint": "npx stylelint \"**/*.scss\"",
+		"stylelint:fix": "npx stylelint --fix \"**/*.scss\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GaleedGutierrez/Curso-Basico-de-Web-Components-con-JavaScript-2020.git"
+	},
+	"keywords": [
+		"javascript",
+		"web-components"
+	],
+	"author": "Galeed Gutierrez <galeedeveloper@gmail.com> (https://galeedgutierrez.com/)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/GaleedGutierrez/Curso-Basico-de-Web-Components-con-JavaScript-2020/issues"
+	},
+	"homepage": "https://github.com/GaleedGutierrez/Curso-Basico-de-Web-Components-con-JavaScript-2020#readme",
+	"devDependencies": {
+		"@types/node": "^20.8.2",
+		"@typescript-eslint/eslint-plugin": "^6.7.4",
+		"@typescript-eslint/parser": "^6.7.4",
+		"eslint": "^8.50.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-import-resolver-typescript": "^3.6.1",
+		"eslint-plugin-check-file": "^2.6.2",
+		"eslint-plugin-editorconfig": "^4.0.3",
+		"eslint-plugin-import": "^2.28.1",
+		"eslint-plugin-prettier": "^5.0.0",
+		"eslint-plugin-simple-import-sort": "^10.0.0",
+		"eslint-plugin-unused-imports": "^3.0.0",
+		"husky": "^8.0.0",
+		"postcss-preset-env": "^9.1.4",
+		"sass": "^1.68.0",
+		"stylelint": "^15.10.3",
+		"stylelint-config-standard-scss": "^11.0.0",
+		"stylelint-order": "^6.0.3",
+		"stylelint-prettier": "^4.0.2",
+		"stylelint-scss": "^5.2.1",
+		"typescript": "^5.0.2",
+		"vite": "^4.4.5"
+	},
+	"browserslist": [
+		"defaults and supports es6-module",
+		"maintained node versions"
+	],
+	"lint-staged": {
+		"*.(j|t)s": "npm run lint:fix",
+		"*.s(a|c)ss": "npm run stylelint:fix"
+	}
+}
