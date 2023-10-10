@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slotted</title>
+		<style>
+			my-element {
+				--primary-color: blue;
+				--heading-primary: 4rem;
+			}
+
+			.segundo {
+				--primary-color: red;
+			}
+
+			.tercero {
+				--secondary-color: lime;
+			}
+		</style>
+	</head>
+	<body>
+		<my-element>
+			<span slot="title"> Hola desde una etiqueta h1 </span>
+			<span class="text" slot="paragraph">
+				Hola desde una etiqueta de párrafo
+			</span>
+		</my-element>
+		<my-element class="segundo">
+			<span slot="title"> Hola desde una etiqueta h1 </span>
+			<span class="text" slot="paragraph">
+				Hola desde una etiqueta de párrafo
+			</span>
+		</my-element>
+		<my-element class="tercero">
+			<span slot="title"> Hola desde una etiqueta h1 </span>
+			<span class="text" slot="paragraph">
+				Hola desde una etiqueta de párrafo
+			</span>
+		</my-element>
+		<my-element>
+			<span slot="title"> Hola desde una etiqueta h1 </span>
+			<span class="text" slot="paragraph">
+				Hola desde una etiqueta de párrafo
+			</span>
+		</my-element>
+		<script type="module" src="./my-element.ts"></script>
+	</body>
+</html>
