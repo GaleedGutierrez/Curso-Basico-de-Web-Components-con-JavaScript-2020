@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Atributos</title>
+		<style>
+			.title {
+				color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Soy un H1 puro</h1>
+		<my-element>
+			<span slot="title">Hola desde un componente 1</span>
+			<span slot="paragraph">Soy un texto ejemplo</span>
+		</my-element>
+		<my-element yellow>
+			<span slot="title">Hola desde un componente 2</span>
+			<span slot="paragraph">Soy un texto ejemplo</span>
+		</my-element>
+		<my-element class="grey">
+			<span slot="title">Hola desde un componente 3</span>
+			<span slot="paragraph">Soy un texto ejemplo</span>
+		</my-element>
+		<article class="card">
+			<my-element>
+				<span slot="title">Hola desde un componente en un article</span>
+				<span slot="paragraph">Soy un texto ejemplo</span>
+			</my-element>
+		</article>
+		<script type="module" src="./my-element.ts"></script>
+	</body>
+</html>
