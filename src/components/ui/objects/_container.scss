@@ -1,0 +1,6 @@
+@use "@styles/settings/variables";
+
+.o-container {
+	max-inline-size: variables.$max-width;
+	margin-inline: auto;
+}

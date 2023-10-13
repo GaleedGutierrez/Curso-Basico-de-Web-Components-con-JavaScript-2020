@@ -1,0 +1,4 @@
+/* stylelint-disable declaration-no-important */
+.is-no-transition * {
+	transition: none !important;
+}

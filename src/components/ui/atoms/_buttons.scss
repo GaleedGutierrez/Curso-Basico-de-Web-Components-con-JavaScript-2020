@@ -1,0 +1,46 @@
+@use "@styles/settings/variables";
+
+.a-button {
+	inline-size: 100%;
+	padding-block: variables.$space-3;
+	border-radius: variables.$border-radius-2;
+	font-weight: variables.$weight-semibold;
+
+	&:disabled {
+		opacity: 0.25;
+		pointer-events: none;
+	}
+}
+
+.a-button-primary {
+	background-color: variables.$color-primary;
+	color: variables.$text-color-white;
+
+	&:hover {
+		@media (hover: hover) {
+			opacity: 0.8;
+		}
+	}
+
+	&:active {
+		background-color: variables.$color-primary-variant;
+		opacity: 1;
+	}
+}
+
+.a-button-secondary {
+	border: variables.$border-025 solid variables.$color-primary;
+	background-color: transparent;
+	color: variables.$text-color-primary;
+
+	&:hover {
+		@media (hover: hover) {
+			opacity: 0.6;
+		}
+	}
+
+	&:active {
+		background-color: variables.$color-primary-light;
+		opacity: 1;
+	}
+}

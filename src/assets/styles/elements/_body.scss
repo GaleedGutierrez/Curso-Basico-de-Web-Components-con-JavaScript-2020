@@ -1,0 +1,10 @@
+@use "@styles/settings/variables";
+@use "@styles/tools/mixins";
+
+body {
+	background-color: oklch(16.61% 0.05 270.62deg);
+	color: variables.$text-color-grey;
+	font-family: variables.$primary-font;
+
+	@include mixins.body-m;
+}

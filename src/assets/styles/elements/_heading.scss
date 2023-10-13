@@ -1,0 +1,14 @@
+@use "@styles/settings/variables";
+@use "@styles/tools/mixins";
+
+h1 {
+	color: variables.$text-color-dark;
+
+	@include mixins.heading-m;
+}
+
+h2 {
+	color: variables.$text-color-dark;
+
+	@include mixins.heading-s;
+}

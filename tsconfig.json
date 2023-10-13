@@ -34,6 +34,6 @@
 			"@fonts/*": ["./assets/fonts/*"],
 			"@icons/*": ["./assets/icons/*"]
 		}
-	}
-	// "include": ["src"]
+	},
+	"include": ["src"]
 }
