@@ -8,7 +8,9 @@ const config: UserConfigExport = {
 		alias: {
 			'@fonts': fileURLToPath(new URL('./assets/fonts', import.meta.url)),
 			'@icons': fileURLToPath(new URL('./assets/icons', import.meta.url)),
-			'@styles': fileURLToPath(new URL('./scss', import.meta.url)),
+			'@styles': fileURLToPath(
+				new URL('./src/assets/styles', import.meta.url)
+			),
 			'@components': fileURLToPath(
 				new URL('./src/components', import.meta.url)
 			)

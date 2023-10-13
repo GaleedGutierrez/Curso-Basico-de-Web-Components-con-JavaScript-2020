@@ -1,0 +1,86 @@
+@use "@styles/settings/variables";
+@use "@styles/tools/mixins";
+
+:host {
+	--primary-color: oklch(54.88% 0.111 271.43deg);
+	--white: oklch(100% 0 0deg);
+	--grey: oklch(59.99% 0 0deg);
+	--blue: oklch(54.88% 0.111 271.43deg);
+
+	block-size: 100vh;
+	block-size: 100svh;
+
+	@include mixins.center-flex;
+}
+
+.product-card {
+	inline-size: 95%;
+	max-inline-size: 90rem;
+
+	&__img-container {
+		position: relative;
+		background: var(--primary-color);
+	}
+
+	&__brand {
+		margin-inline-start: 1rem;
+		color: variables.$text-color-dark;
+		font-size: 8rem;
+		font-weight: variables.$weight-bold;
+		line-height: normal;
+		opacity: 0.2;
+	}
+
+	&__img {
+		position: relative;
+		inset-block-start: 5rem;
+		max-inline-size: 72rem;
+	}
+
+	&__info-container {
+		padding-block: variables.$space-5;
+		padding-inline: variables.$space-5;
+		background-color: var(--white);
+	}
+
+	&__collection-title {
+		margin-block-end: variables.$space-1;
+		color: variables.$color-grey;
+	}
+
+	&__buy-container {
+		margin-block-start: variables.$space-5;
+
+		@include mixins.justify-between-flex;
+	}
+
+	&__price {
+		@include mixins.heading-m;
+	}
+
+	&__button {
+		padding-block: variables.$space-4;
+		padding-inline: variables.$space-6;
+		border-radius: variables.$border-radius-5;
+		background-color: var(--blue);
+		color: variables.$text-color-white;
+
+		@include mixins.heading-s;
+	}
+}
+
+@media screen and (width >= 768px) {
+	.product-card {
+		display: flex;
+
+		&__img {
+			inset-block-start: 0;
+			inset-inline-start: -4rem;
+			transform: scale(1.5) rotate(-30deg);
+		}
+
+		&__info-container {
+			padding-inline: variables.$space-10;
+		}
+	}
+}

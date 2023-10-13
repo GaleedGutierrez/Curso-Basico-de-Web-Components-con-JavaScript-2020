@@ -1,0 +1,42 @@
+@use "@styles/settings/variables";
+@use "@styles/tools/mixins";
+
+$screen-tablet: variables.$screen-tablet;
+
+.m-tab {
+	gap: variables.$space-2;
+	inline-size: fit-content;
+	padding-block: variables.$space-4;
+	padding-inline: variables.$space-6;
+	border-radius: variables.$border-radius-2;
+	color: variables.$text-color-grey;
+	font-weight: variables.$weight-semibold;
+
+	&__icon * {
+		fill: currentcolor;
+	}
+
+	&__go-to {
+		display: none;
+	}
+
+	&:hover {
+		@media (hover: hover) {
+			color: variables.$text-color-primary;
+		}
+	}
+
+	&--active,
+	&:active {
+		background-color: variables.$color-primary-light;
+		color: variables.$text-color-primary;
+	}
+
+	@include mixins.center-flex;
+
+	@media screen and (width >= $screen-tablet) {
+		&__go-to {
+			display: inline;
+		}
+	}
+}

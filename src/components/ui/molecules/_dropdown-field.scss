@@ -1,0 +1,124 @@
+@use "@styles/settings/variables";
+@use "@styles/tools/mixins";
+
+.m-custom-select {
+	position: relative;
+	inline-size: 100%;
+	color: variables.$text-color-dark;
+
+	&__selected-value {
+		gap: variables.$space-3;
+
+		@include mixins.center-flex;
+	}
+
+	&__list {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__label {
+		display: flex;
+		gap: variables.$space-3;
+		align-items: center;
+		inline-size: 100%;
+		padding-block: variables.$space-3;
+		padding-inline: variables.$space-4;
+		cursor: pointer;
+	}
+}
+
+.m-custom-select__select-button {
+	inline-size: 100%;
+	padding-block: variables.$space-3;
+	padding-inline: variables.$space-4;
+	border: variables.$border-025 solid variables.$border-grey;
+	border-radius: variables.$border-radius-2;
+	margin-block-end: variables.$space-2;
+	background-color: variables.$background-white;
+	cursor: pointer;
+
+	.m-custom-select.active & {
+		outline: variables.$color-primary solid variables.$border-025;
+		box-shadow: 0 0 variables.$space-8 0 oklch(variables.$purple-lch / 25%);
+	}
+
+	@include mixins.justify-between-flex;
+}
+
+.m-custom-select__icon {
+	block-size: variables.$space-4;
+	inline-size: variables.$space-4;
+
+	& * {
+		fill: variables.$color-grey;
+	}
+
+	&[data-icon="devto"] path:nth-of-type(even) {
+		/* stylelint-disable-next-line declaration-no-important */
+		fill: variables.$color-white !important;
+	}
+}
+
+.m-custom-select__arrow {
+	transition: transform ease-in-out variables.$time-001;
+	transform: rotate(180deg);
+
+	.m-custom-select.active & {
+		transform: rotate(0deg);
+	}
+}
+
+.m-custom-select__select-dropdown {
+	position: absolute;
+	overflow-y: auto;
+	max-block-size: 20rem;
+	inline-size: 100%;
+	border: variables.$border-025 solid variables.$color-borders;
+	border-radius: variables.$border-radius-2;
+	background-color: variables.$background-white;
+	transition: variables.$time-002 ease;
+	transform: scaleY(0);
+	visibility: hidden;
+	opacity: 0;
+	box-shadow: 0 0 3.2rem 0 oklch(variables.$black-lch / 10%);
+
+	.m-custom-select.active & {
+		transform: scaleY(1);
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&::-webkit-scrollbar {
+		inline-size: 0.7rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: variables.$border-radius-6;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: variables.$border-radius-6;
+		background: variables.$color-grey;
+	}
+
+	& .m-custom-select__list:hover {
+		background-color: variables.$color-borders;
+	}
+
+	& input:focus-visible ~ label {
+		color: variables.$color-primary-variant;
+
+		& .m-custom-select__icon * {
+			fill: currentcolor;
+		}
+	}
+
+	& .m-custom-select__list:has(> input:checked) {
+		color: variables.$text-color-primary;
+
+		& .m-custom-select__icon * {
+			fill: currentcolor;
+		}
+	}
+}

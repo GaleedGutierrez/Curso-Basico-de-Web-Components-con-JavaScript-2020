@@ -1,0 +1,6 @@
+@use "@styles/settings/variables";
+
+html {
+	font-size: variables.$fs-base;
+	scroll-behavior: smooth;
+}

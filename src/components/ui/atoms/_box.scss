@@ -1,0 +1,7 @@
+@use "@styles/settings/variables";
+
+.a-box {
+	padding: variables.$space-10;
+	border-radius: variables.$border-radius-3;
+	background-color: variables.$background-white;
+}

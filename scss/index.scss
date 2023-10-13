@@ -1,0 +1,39 @@
+// Generic
+@use "generic/normalize";
+@use "generic/light-reset";
+@use "generic/box-sizing";
+
+// Elements
+@use "elements/html";
+@use "elements/body";
+@use "elements/heading";
+@use "elements/image";
+@use "elements/link";
+
+// Objects
+@use "objects/container";
+@use "objects/position";
+@use "objects/flex";
+@use "objects/ui-list";
+
+// Atoms
+@use "atoms/buttons";
+@use "atoms/box";
+
+// Molecules
+@use "molecules/text-field";
+@use "molecules/tabs";
+@use "molecules/dropdown-field";
+
+// Organisms
+
+// Utilities
+@use "utilities/sr-only";
+@use "utilities/skip-link";
+@use "utilities/typography";
+@use "utilities/visible";
+@use "utilities/animation";
+
+// Borrar al terminar - es solo para poder probar cosas de forma rápida
+@use "@styles/settings/variables";
+@use "@styles/tools/mixins";

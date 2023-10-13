@@ -1,0 +1,24 @@
+@use "@styles/settings/variables";
+@use "@styles/tools/functions";
+@use "@styles/tools/mixins";
+
+.is-skip-link {
+	position: absolute;
+	z-index: variables.$z-index-9-accessibility;
+	display: inline-block;
+	overflow: hidden;
+	padding: variables.$space-4;
+	border-radius: variables.$border-2;
+	margin-inline: variables.$space-6;
+	margin-block-start: variables.$space-6;
+
+	// background-color: var(--background-color);
+	// color: var(--text-color);
+	font-weight: variables.$weight-semibold;
+	transition: transform variables.$time-001;
+	transform: translateY(-200%);
+
+	&:focus-visible {
+		transform: translateY(0%);
+	}
+}

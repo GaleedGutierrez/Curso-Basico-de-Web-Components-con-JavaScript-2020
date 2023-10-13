@@ -1,0 +1,51 @@
+// Base colors
+$_color-primary-lch: 53.93% 0.264 282.08deg;
+$_color-black-lch: 0% 0 0deg;
+
+// Purple
+$_purple: oklch($_color-primary-lch);
+$_purple-hover-color: oklch(79.27% 0.115 292.76deg);
+$_light-purple: oklch(94.8% 0.0276 295.0409deg);
+
+// Grey
+$_dark-grey: oklch(32.11% 0 0deg);
+$_grey: oklch(55.47% 0 0deg);
+$_borders: oklch(88.45% 0 0deg);
+$_light-grey: oklch(98.48% 0 0deg);
+
+// White
+$_white: oklch(100% 0 0deg);
+
+// Black
+$_black: oklch($_color-black-lch);
+
+// Red
+$_red: oklch(65.29% 0.233 26.61deg);
+
+// Gral
+$purple-lch: $_color-primary-lch;
+$black-lch: $_color-black-lch;
+
+// Text
+$text-color-dark: $_dark-grey;
+$text-color-grey: $_grey;
+$text-color-white: $_white;
+$text-color-primary: $_purple;
+$text-color-red: $_red;
+
+// Colors
+$color-primary: $_purple;
+$color-primary-variant: $_purple-hover-color;
+$color-primary-light: $_light-purple;
+$color-white: $_white;
+$color-grey: $_grey;
+$color-borders: $_borders;
+$color-black: $_black;
+
+// Background
+$background-white: $_light-grey;
+$background-light-grey: $_light-grey;
+
+// Border
+$border-grey: $_borders;
+$border-red: $_red;

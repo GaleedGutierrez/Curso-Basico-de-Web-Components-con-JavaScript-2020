@@ -1,0 +1,29 @@
+@use "@styles/settings/variables";
+
+@mixin heading-m {
+	font-size: variables.$fs-title-3xl;
+	font-style: normal;
+	font-weight: variables.$weight-bold;
+	line-height: variables.$lh-150per;
+}
+
+@mixin heading-s {
+	font-size: variables.$fs-title-md;
+	font-style: normal;
+	font-weight: variables.$weight-bold;
+	line-height: variables.$lh-150per;
+}
+
+@mixin body-m {
+	font-size: variables.$fs-title-md;
+	font-style: normal;
+	font-weight: variables.$weight-normal;
+	line-height: variables.$lh-150per;
+}
+
+@mixin body-s {
+	font-size: variables.$fs-title-xs;
+	font-style: normal;
+	font-weight: variables.$weight-normal;
+	line-height: variables.$lh-150per;
+}
